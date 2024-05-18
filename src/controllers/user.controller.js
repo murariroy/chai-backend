@@ -161,7 +161,7 @@ const refreshAccessToken = asyncHandler(async(req,res) =>{
        || req.body.refreshToken
 
 
-       if(incomingRefreshtoken){
+       if(!incomingRefreshtoken){
         throw new ApiError(401,"unauthrozised request")
        }
 
